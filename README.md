@@ -38,6 +38,7 @@ docker compose up --build
 ```
 
 The application will be available at:
+
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:8080
 
@@ -76,18 +77,21 @@ The frontend will be available at http://localhost:3000
 The project includes several types of tests:
 
 ### Backend Unit Tests
+
 ```bash
 cd bugtracker-backend
 go test ./... -v
 ```
 
 ### Frontend Unit Tests
+
 ```bash
 cd bugtracker-frontend
 npm test
 ```
 
 ### API Tests
+
 ```bash
 cd tests-api
 npm install
@@ -95,6 +99,7 @@ npm run test:local
 ```
 
 ### E2E Tests
+
 ```bash
 cd tests-e2e
 npm install
@@ -102,7 +107,9 @@ npx playwright test
 ```
 
 ### Performance Tests
+
 First, install K6:
+
 ```bash
 # MacOS
 brew install k6
@@ -115,6 +122,7 @@ For Linux installation instructions, please refer to the [official K6 installati
 ```
 
 Then run the tests:
+
 ```bash
 cd tests-perf
 k6 run script.js
@@ -137,7 +145,7 @@ To start Jenkins locally using Docker Compose:
 
 ```bash
 cd jenkins
-docker-compose up --build
+docker compose up --build
 ```
 
 Jenkins will then be available at [http://localhost:9000](http://localhost:9000).
@@ -152,4 +160,4 @@ Jenkins will then be available at [http://localhost:9000](http://localhost:9000)
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details 
+This project is licensed under the MIT License - see the LICENSE file for details
