@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             agent{
                 docker {
-                    image 'golang:1.21-alpine'  // lekki, szybki obraz do Go
+                    image 'snakee/golang-junit:1.21'  
                     args '-u root:root'         // uruchom jako root, aby uniknąć problemów z uprawnieniami
                     reuseNode true
                 }
