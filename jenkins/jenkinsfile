@@ -1,5 +1,5 @@
 pipeline {
-    agent docker
+    agent none
 
     stages {
         stage('Hello') {
@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 dir ('bugtracker-backend')
-                sh 'go test -v ./...'
+                    sh 'go test -v ./...'
             }
         }
     }
