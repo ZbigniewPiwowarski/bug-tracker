@@ -3,10 +3,13 @@ pipeline {
 
     stages {
         stage('Hello') {
+            agent{
+                image 'snakee/golang-junit:1.21'
+                reuseNode true
+            }
             steps {
-                echo 'Hello World'
-                sh 'echo "hello world"'
-                sh 'date'
+                dir ('bugtracker-backend')
+                sh 'go test -v ./...'
             }
         }
     }
