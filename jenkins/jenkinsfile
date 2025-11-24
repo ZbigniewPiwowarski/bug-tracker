@@ -4,8 +4,11 @@ pipeline {
     stages {
         stage('Hello') {
             agent{
-                image 'snakee/golang-junit:1.21'
-                reuseNode true
+                docker {
+                    image 'snakee/golang-junit:1.21'
+                    reuseNode true
+                }
+     
             }
             steps {
                 dir ('bugtracker-backend')
