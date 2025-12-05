@@ -16,7 +16,7 @@ pipeline {
                     sh 'go test -v ./...'
                 }
             }
-        },
+        }
         stage('Unit Tests - Frontend') {
             agent{
                 docker {
