@@ -42,4 +42,4 @@ yarn-error.log*
 next-env.d.ts
 
 # Test reports
-# test-results.xml
+test-results.xml
