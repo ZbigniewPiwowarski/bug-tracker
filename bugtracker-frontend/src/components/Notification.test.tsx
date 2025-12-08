@@ -28,26 +28,26 @@ describe("Notification", () => {
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
-  it.skip("should call onClose when close button is clicked", () => {
-    const onClose = jest.fn();
-    render(<Notification message="Test notification" onClose={onClose} />);
+  // it("should call onClose when close button is clicked", () => {
+  //   const onClose = jest.fn();
+  //   render(<Notification message="Test notification" onClose={onClose} />);
 
-    const closeButton = screen.getByRole("button", { name: /close/i });
-    fireEvent.click(closeButton);
+  //   const closeButton = screen.getByRole("button", { name: /close/i });
+  //   fireEvent.click(closeButton);
 
-    expect(onClose).toHaveBeenCalledTimes(1);
-  });
+  //   expect(onClose).toHaveBeenCalledTimes(1);
+  // });
 
-  it.skip("should apply success styles by default", () => {
-    render(<Notification message="Success notification" onClose={jest.fn()} />);
+  // it("should apply success styles by default", () => {
+  //   render(<Notification message="Success notification" onClose={jest.fn()} />);
 
-    const notification = screen.getByRole("alert", { hidden: true });
-    expect(notification).toHaveClass(
-      "bg-green-100",
-      "border-green-400",
-      "text-green-700"
-    );
-  });
+  //   const notification = screen.getByRole("alert", { hidden: true });
+  //   expect(notification).toHaveClass(
+  //     "bg-green-100",
+  //     "border-green-400",
+  //     "text-green-700"
+  //   );
+  // });
 
   it("should apply error styles when type is error", () => {
     render(
